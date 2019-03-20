@@ -1,6 +1,10 @@
-# BCH-DNS for bch.sx
+# Terms for clearweb *.bch.sx registrations: 
 
-This is a front-end implementation of BCH-DNS that allows you to create and manage .bch.sx domain names. If you register "bitcoinwallet", it will be accessible through bitcoinwallet.bch.sx and in the future just bitcoinwallet.bch
+See [njalla terms of service](https://njal.la/tos/#term_4) section 4
+
+# BCH-DNS Spec
+
+BCH-DNS allows you to create, manage and update domain names and dns records on the Bitcoin Cash blockchain. If you register "bitcoinwallet", it will be accessible through bitcoinwallet.bch.sx and in the future just bitcoinwallet.bch
 
 ## How does this work?
 
@@ -8,21 +12,21 @@ Each action is done on the blockchain through a OP_RETURN transaction. All chang
 
 ## Actions
 
-A list of actions currently supported by this implementation of BCH DNS. Content in quotes are a new push data. First push data is the protocol identifier registered for BCH DNS, second pushdata is version number 0(x) then up to 1296 different actions starting at 00-99 ending at 0A-ZZ, third is the domain you want to register or modify, fourth which is optional is the data to set. If left blank it will be deleted/unset. The first person to register the domain gets to keep it. Only confirmed (1-conf+) actions are considered valid.
+Content in quotes are a new pushdata. First pushdata is the protocol identifier registered for BCH DNS, second pushdata is version number 0(x) then up to 1296 different actions starting at 00-99 ending at 0A-ZZ, third is the domain you want to register or modify, fourth which is optional is the data to set. If left blank it will be deleted/unset. The first person to register the domain gets to keep it. Only confirmed (1-conf+) actions are considered valid.
 
-Register domain
+### Register domain
 
 `"0x04008080" "0x00" "bcash"`
 
-Delete/Free domain
+### Delete/Free domain
 
 `"0x04008080" "0x01" "bcash"`
 
-Set/update A record
+### Set/update A record
 
 `"0x04008080" "0x02" "bcash" "127.0.0.1"`
 
-Set/update CNAME record
+### Set/update CNAME record
 
 `"0x04008080" "0x03" "bcash" "example.com"`
 
