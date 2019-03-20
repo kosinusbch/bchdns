@@ -1,8 +1,8 @@
-# Terms for clearweb *.bch.sx registrations: 
+## Terms for clearweb *.bch.sx registrations: 
 
 See [njalla terms of service](https://njal.la/tos/#term_4) section 4
 
-# BCH-DNS Spec
+# BCH-DNS non-technical specification
 
 BCH-DNS allows you to create, manage and update domain names and dns records on the Bitcoin Cash blockchain. If you register "bitcoinwallet", it will be accessible through bitcoinwallet.bch.sx and in the future just bitcoinwallet.bch
 
